@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: google-checker
+spec:
+  selector:
+    app: google-checker
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: NodePort

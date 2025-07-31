@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: google-checker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: google-checker
+  template:
+    metadata:
+      labels:
+        app: google-checker
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/path: /metrics
+        prometheus.io/port: "8080"
+    spec:
+      containers:
+        - name: google-checker
+          image: google-checker:local
+          ports:
+            - containerPort: 8080
