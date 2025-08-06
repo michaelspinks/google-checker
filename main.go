@@ -29,8 +29,14 @@ func checkGoogle() {
 		} else {
 			log.Println("Google is UP")
 			googleUp.Set(1)
-			resp.Body.Close()
 		}
+
+		if resp != nil {
+			if err := resp.Body.Close(); err != nil {
+				log.Printf("warning: error closing response body: %v", err)
+			}
+		}
+
 		time.Sleep(10 * time.Second)
 	}
 }
