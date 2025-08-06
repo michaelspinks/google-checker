@@ -433,3 +433,13 @@ minikube service jaeger -n observability
 
 Open Jaeger Web UI, for example http://127.0.0.1:33117
 
+## OpenTelemetry
+
+Add modules
+
+```bash
+go get go.opentelemetry.io/otel@latest
+go get go.opentelemetry.io/otel/sdk@latest
+go get go.opentelemetry.io/otel/exporters/jaeger@latest
+```
+
