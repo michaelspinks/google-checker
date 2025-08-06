@@ -417,3 +417,19 @@ Let me know if you want a **prebuilt alert rule template** or want to tweak the 
 
 ## Persistence
 
+## Tracing
+
+Add Jaeger 
+
+```bash
+kubectl apply -f k8s/jaeger.yaml
+```
+
+Expose Jaeger Web UI via Minikube:
+
+```bash
+minikube service jaeger -n observability
+```
+
+Open Jaeger Web UI, for example http://127.0.0.1:33117
+
