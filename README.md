@@ -441,5 +441,7 @@ Add modules
 go get go.opentelemetry.io/otel@latest
 go get go.opentelemetry.io/otel/sdk@latest
 go get go.opentelemetry.io/otel/exporters/jaeger@latest
+go get go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp@latest
+
 ```
 
